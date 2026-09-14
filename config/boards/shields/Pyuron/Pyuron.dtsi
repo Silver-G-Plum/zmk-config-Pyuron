@@ -24,23 +24,54 @@ split_inputs {
       };
     };
 
-    trackball_listener_L: trackball_listener_L {
-      compatible = "zmk,input-listener";
-      status = "disabled";
-      device = <&trackball_split_L>;
+trackball_listener_L: trackball_listener_L {
+    compatible = "zmk,input-listener";
+    status = "disabled";
+    device = <&trackball_split_L>;
+
+    // 通常時：カーソル
+    input-processors =
+        <&zip_xy_transform
+            (INPUT_TRANSFORM_XY_SWAP |
+             INPUT_TRANSFORM_X_INVERT |
+             INPUT_TRANSFORM_Y_INVERT)>;
+
+    // Layer 11：スクロール
+    scroll_layer_11 {
+        layers = <11>;
         input-processors =
-            <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_xy_transform
+                (INPUT_TRANSFORM_XY_SWAP |
+                 INPUT_TRANSFORM_X_INVERT |
+                 INPUT_TRANSFORM_Y_INVERT)>,
             <&zip_xy_scaler 1 16>,
             <&zip_scroll_scaler 1 5>,
             <&zip_xy_to_scroll_mapper>;
     };
+};
 
-    trackball_listener_R: trackball_listener_R {
-      compatible = "zmk,input-listener";
-      status = "disabled";
+trackball_listener_R: trackball_listener_R {
+    compatible = "zmk,input-listener";
+    status = "disabled";
+
+    // 通常時：カーソル
+    input-processors =
+        <&zip_xy_transform
+            (INPUT_TRANSFORM_XY_SWAP |
+             INPUT_TRANSFORM_Y_INVERT)>;
+
+    // Layer 12：スクロール
+    scroll_layer_12 {
+        layers = <12>;
         input-processors =
-            <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>;
+            <&zip_xy_transform
+                (INPUT_TRANSFORM_XY_SWAP |
+                 INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_xy_scaler 1 16>,
+            <&zip_scroll_scaler 1 5>,
+            <&zip_xy_to_scroll_mapper>;
     };
+};
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
