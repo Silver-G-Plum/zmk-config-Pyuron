@@ -14,17 +14,74 @@
     combos {
         compatible = "zmk,combos";
 
-        // S + D → layer 11
-        combo_left_scroll {
+        // F + E → 左クリック
+        combo_left_click_1 {
             timeout-ms = <50>;
-            key-positions = <10 11>;
+            key-positions = <13 2>;
+            bindings = <&mkp LCLK>;
+        };
+
+        // J + I → 左クリック
+        combo_left_click_2 {
+            timeout-ms = <50>;
+            key-positions = <16 7>;
+            bindings = <&mkp LCLK>;
+        };
+
+        // W + A → 右クリック
+        combo_right_click_1 {
+            timeout-ms = <50>;
+            key-positions = <1 10>;
+            bindings = <&mkp RCLK>;
+        };
+
+        // O + ' → 右クリック
+        combo_right_click_2 {
+            timeout-ms = <50>;
+            key-positions = <8 19>;
+            bindings = <&mkp RCLK>;
+        };
+
+        // W + E → 左トラックボールをスクロール
+        combo_scroll_left {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
             bindings = <&mo 11>;
         };
-        // K + L → layer 12
-        combo_right_scroll {
+
+        // I + O → 右トラックボールをスクロール
+        combo_scroll_right {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&mo 12>;
+        };
+
+        // S + D → 中クリック
+        combo_middle_click_1 {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            bindings = <&mkp MCLK>;
+        };
+
+        // K + L → 中クリック
+        combo_middle_click_2 {
             timeout-ms = <50>;
             key-positions = <17 18>;
-            bindings = <&mo 12>;
+            bindings = <&mkp MCLK>;
+        };
+
+        // 左親指2キー → レイヤー9
+        combo_left_thumb_layer {
+            timeout-ms = <50>;
+            key-positions = <34 35>;
+            bindings = <&mo 9>;
+        };
+
+        // 右親指2キー → レイヤー10
+        combo_right_thumb_layer {
+            timeout-ms = <50>;
+            key-positions = <36 37>;
+            bindings = <&mo 10>;
         };
     };
 
@@ -163,6 +220,24 @@
         };
 
         layer_12 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_13 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_14 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
