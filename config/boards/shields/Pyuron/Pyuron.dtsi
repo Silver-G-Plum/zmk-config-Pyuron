@@ -33,8 +33,7 @@ trackball_listener_L: trackball_listener_L {
     input-processors =
         <&zip_xy_transform
             (INPUT_TRANSFORM_XY_SWAP |
-             INPUT_TRANSFORM_X_INVERT |
-             INPUT_TRANSFORM_Y_INVERT)>;
+             INPUT_TRANSFORM_X_INVERT)>;
 
     // Layer 11：スクロール
     scroll_layer_11 {
@@ -42,8 +41,7 @@ trackball_listener_L: trackball_listener_L {
         input-processors =
             <&zip_xy_transform
                 (INPUT_TRANSFORM_XY_SWAP |
-                 INPUT_TRANSFORM_X_INVERT |
-                 INPUT_TRANSFORM_Y_INVERT)>,
+                 INPUT_TRANSFORM_X_INVERT)>,
             <&zip_xy_scaler 1 16>,
             <&zip_scroll_scaler 1 5>,
             <&zip_xy_to_scroll_mapper>;
