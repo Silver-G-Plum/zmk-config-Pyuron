@@ -20,7 +20,6 @@
             key-positions = <10 11>;
             bindings = <&mo 11>;
         };
-
         // K + L → layer 12
         combo_right_scroll {
             timeout-ms = <50>;
