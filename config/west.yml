@@ -21,5 +21,8 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
+    - name: zmk-scroll-snap
+      remote: kot149
+      revision: v1 
   self:
     path: config
