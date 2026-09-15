@@ -5,6 +5,7 @@
 #include <input/processors.dtsi>
 #include <physical_layouts.dtsi>
 #include <scroll-snap.dtsi>
+#include <zmk-input-inertia/input/processor/input_inertia.dtsi>
 
 &uicr {
     nfct-pins-as-gpios;
@@ -14,6 +15,22 @@
     chosen {
         zmk,physical-layout = &default_layout;
     };
+
+&zip_inertia {
+    trigger-ms = <35>;
+
+    move-decay-factor-int = <90>;
+    move-report-interval-ms = <35>;
+    move-threshold-start = <15>;
+    move-threshold-stop = <1>;
+
+    scroll-decay-factor-int = <85>;
+    scroll-report-interval-ms = <65>;
+    scroll-threshold-start = <2>;
+    scroll-threshold-stop = <0>;
+
+    cancel-scroll-inertia-on-ctrl;
+};
 
 split_inputs {
       #address-cells = <1>;
@@ -34,7 +51,8 @@ trackball_listener_L: trackball_listener_L {
     input-processors =
         <&zip_xy_transform
             (INPUT_TRANSFORM_XY_SWAP |
-             INPUT_TRANSFORM_X_INVERT)>;
+             INPUT_TRANSFORM_X_INVERT)>,
+        <&zip_inertia>;
 
     // Layer 11：スクロール
     scroll_layer_11 {
@@ -47,7 +65,8 @@ trackball_listener_L: trackball_listener_L {
             <&zip_scroll_scaler 1 8>,
             <&zip_xy_to_scroll_mapper>,
             <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,
-            <&zip_scroll_snap>;
+            <&zip_scroll_snap>,
+            <&zip_inertia>;
     };
 };
 
@@ -59,7 +78,8 @@ trackball_listener_R: trackball_listener_R {
     input-processors =
         <&zip_xy_transform
             (INPUT_TRANSFORM_XY_SWAP |
-             INPUT_TRANSFORM_Y_INVERT)>;
+             INPUT_TRANSFORM_Y_INVERT)>,
+        <&zip_inertia>;
 
     // Layer 12：スクロール
     scroll_layer_12 {
@@ -72,7 +92,8 @@ trackball_listener_R: trackball_listener_R {
             <&zip_scroll_scaler 1 8>,
             <&zip_xy_to_scroll_mapper>,
             <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,
-            <&zip_scroll_snap>;
+            <&zip_scroll_snap>,
+            <&zip_inertia>;
     };
 };
 
