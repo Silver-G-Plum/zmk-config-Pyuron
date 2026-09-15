@@ -7,15 +7,6 @@
 #include <scroll-snap.dtsi>
 #include <zmk-input-inertia/input/processor/input_inertia.dtsi>
 
-&uicr {
-    nfct-pins-as-gpios;
-};
-
-/ {
-    chosen {
-        zmk,physical-layout = &default_layout;
-    };
-
 &zip_inertia {
     trigger-ms = <35>;
 
@@ -31,6 +22,17 @@
 
     cancel-scroll-inertia-on-ctrl;
 };
+
+&uicr {
+    nfct-pins-as-gpios;
+};
+
+/ {
+    chosen {
+        zmk,physical-layout = &default_layout;
+    };
+
+
 
 split_inputs {
       #address-cells = <1>;
