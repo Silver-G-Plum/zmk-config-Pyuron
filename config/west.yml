@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/caksoylar  
     - name: sekigon-gonnoc
       url-base: https://github.com/sekigon-gonnoc
+    - name: kot149
+      url-base: https://github.com/kot149      
   projects:
     - name: zmk
       remote: zmkfirmware
