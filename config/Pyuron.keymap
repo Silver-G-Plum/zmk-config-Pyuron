@@ -115,7 +115,7 @@
         // 左下外側2キー → 左トラックボールをスクロール
         combo_scroll_left_3 {
             timeout-ms = <50>;
-            key-positions = <31 32>;
+            key-positions = <32 33>;
             bindings = <&mo 11>;
         };
 
