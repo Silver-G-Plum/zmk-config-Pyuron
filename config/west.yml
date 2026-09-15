@@ -10,8 +10,8 @@ manifest:
       url-base: https://github.com/sekigon-gonnoc
     - name: kot149
       url-base: https://github.com/kot149  
-  　- name: amgskobo
-    　url-base: https://github.com/amgskobo   
+    - name: amgskobo
+      url-base: https://github.com/amgskobo   
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -26,8 +26,8 @@ manifest:
     - name: zmk-scroll-snap
       remote: kot149
       revision: v1
- 　 - name: zmk-input-inertia
-    　remote: amgskobo
-    　revision: main
+    - name: zmk-input-inertia
+      remote: amgskobo
+      revision: main
   self:
     path: config
