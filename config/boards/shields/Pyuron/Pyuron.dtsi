@@ -8,34 +8,6 @@
 #include <mouse-gesture.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
-&zip_mouse_gesture {
-    stroke-size = <300>;
-    enable-eager-mode;
-    suppress-movement;
-    idle-timeout-ms = <150>;
-    gesture-cooldown-ms = <500>;
-
-    gesture_forward {
-        pattern = <GESTURE_RIGHT>;
-        bindings = <&kp C_AC_FORWARD>;
-    };
-
-    gesture_back {
-        pattern = <GESTURE_LEFT>;
-        bindings = <&kp C_AC_BACK>;
-    };
-
-    gesture_zoom_in {
-        pattern = <GESTURE_UP>;
-        bindings = <&kp F13>;
-    };
-
-    gesture_zoom_out {
-        pattern = <GESTURE_DOWN>;
-        bindings = <&kp F14>;
-    };
-};
-
 &zip_inertia {
     trigger-ms = <35>;
 
