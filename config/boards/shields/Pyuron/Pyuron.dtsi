@@ -52,10 +52,10 @@ trackball_listener_L: trackball_listener_L {
 
     // 通常時：カーソル
     input-processors =
-        <&zip_mouse_gesture>,
         <&zip_xy_transform
             (INPUT_TRANSFORM_XY_SWAP |
              INPUT_TRANSFORM_X_INVERT)>,
+        <&zip_mouse_gesture>,
         <&zip_inertia>;
 
     // Layer 11：スクロール
@@ -80,10 +80,10 @@ trackball_listener_R: trackball_listener_R {
 
     // 通常時：カーソル
     input-processors =
-        <&zip_mouse_gesture>,
         <&zip_xy_transform
             (INPUT_TRANSFORM_XY_SWAP |
              INPUT_TRANSFORM_Y_INVERT)>,
+        <&zip_mouse_gesture>,
         <&zip_inertia>;
 
     // Layer 12：スクロール
