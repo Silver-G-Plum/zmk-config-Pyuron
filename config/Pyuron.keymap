@@ -6,8 +6,6 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 
-#define MOUSE 6
-
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -243,7 +241,7 @@
 
             // 物理行1: 0 - 9
             &kp DEL
-            &kp BSCP
+            &kp BSPC
             &kp PG_DN
             &kp PG_UP
             &kp ESC
@@ -508,7 +506,7 @@
             >;
         };
 
-        MOUSE {
+        layer_6 {
             bindings = <
 
             // 物理行1: 0 - 9
