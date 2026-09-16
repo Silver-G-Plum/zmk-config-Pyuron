@@ -32,12 +32,12 @@
 
     gesture_zoom_in {
         pattern = <GESTURE_UP>;
-        bindings = <&kp F13>;
+        bindings = <&kp LG(PLUS)>;
     };
 
     gesture_zoom_out {
         pattern = <GESTURE_DOWN>;
-        bindings = <&kp F14>;
+        bindings = <&kp LG(MINUS)>;
     };
 };
 
