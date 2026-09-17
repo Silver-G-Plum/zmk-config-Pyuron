@@ -202,26 +202,26 @@
             &kp S
             &kp D
             &lt 5 F
-            &mt_exit_AML_on_tap LCTRL G
-            &mt_exit_AML_on_tap RCTRL H
+            &mt LCTRL G
+            &mt RCTRL H
             &lt 6 J
             &kp K
             &kp L
             &kp MINUS
 
             // 物理行3: 20 - 31
-            &mt_exit_AML_on_tap LSHFT Z
-            &mt_exit_AML_on_tap LALT X
-            &mt_exit_AML_on_tap LGUI C
-            &mt_exit_AML_on_tap LSHFT V
+            &mt LSHFT Z
+            &mt LALT X
+            &mt LGUI C
+            &mt LSHFT V
             &lt 4 B
             &lt 3 GRAVE
             &lt 2 GRAVE
             &lt 1 N
-            &mt_exit_AML_on_tap RSHFT M
-            &mt_exit_AML_on_tap RGUI COMMA
-            &mt_exit_AML_on_tap RALT DOT
-            &mt_exit_AML_on_tap RSHFT SLASH
+            &mt RSHFT M
+            &mt RGUI COMMA
+            &mt RALT DOT
+            &mt RSHFT SLASH
 
             // 物理行4: 32 - 39
             &lt 5 ESC
