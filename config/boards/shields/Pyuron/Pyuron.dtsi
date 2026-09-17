@@ -55,8 +55,8 @@ trackball_listener_L: trackball_listener_L {
         <&zip_xy_transform
             (INPUT_TRANSFORM_XY_SWAP |
              INPUT_TRANSFORM_X_INVERT)>,
-        <&zip_mouse_gesture>,
-        <&zip_inertia>;
+        <&zip_xy_scaler 1 2>,
+        <&zip_mouse_gesture>;
 
     // Layer 11：スクロール
     scroll_layer_11 {
@@ -66,11 +66,10 @@ trackball_listener_L: trackball_listener_L {
                 (INPUT_TRANSFORM_XY_SWAP |
                  INPUT_TRANSFORM_X_INVERT)>,
             <&zip_xy_scaler 1 24>,
-            <&zip_scroll_scaler 1 8>,
+            <&zip_scroll_scaler 1 16>,
             <&zip_xy_to_scroll_mapper>,
-            <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,
-            <&zip_scroll_snap>,
-            <&zip_inertia>;
+            <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
+            <&zip_scroll_snap>;
     };
 };
 
@@ -83,8 +82,8 @@ trackball_listener_R: trackball_listener_R {
         <&zip_xy_transform
             (INPUT_TRANSFORM_XY_SWAP |
              INPUT_TRANSFORM_Y_INVERT)>,
-        <&zip_mouse_gesture>,
-        <&zip_inertia>;
+        <&zip_xy_scaler 1 2>,
+        <&zip_mouse_gesture>;
 
     // Layer 12：スクロール
     scroll_layer_12 {
@@ -94,11 +93,10 @@ trackball_listener_R: trackball_listener_R {
                 (INPUT_TRANSFORM_XY_SWAP |
                  INPUT_TRANSFORM_Y_INVERT)>,
             <&zip_xy_scaler 1 24>,
-            <&zip_scroll_scaler 1 8>,
+            <&zip_scroll_scaler 1 16>,
             <&zip_xy_to_scroll_mapper>,
-            <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,
-            <&zip_scroll_snap>,
-            <&zip_inertia>;
+            <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
+            <&zip_scroll_snap>;
     };
 };
 
