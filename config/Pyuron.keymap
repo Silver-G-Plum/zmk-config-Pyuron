@@ -974,52 +974,52 @@
             bindings = <
 
             // 物理行1: 0 - 9
-            &ctrl_mb1_hold
+            &trans
+            &mkp MB3
+            &mkp MB2
+            &trans
+            &trans
+            &trans
+            &trans
+            &mkp MB2
+            &mkp MB3
+            &trans
+
+            // 物理行2: 10 - 19
+            &shift_mb1_hold
+            &ctrl_mb3_hold
+            &ctrl_mb2_hold
+            &mkp MB1
+            &trans
+            &trans
+            &mkp MB1
             &ctrl_mb2_hold
             &ctrl_mb3_hold
             &shift_mb1_hold
+
+            // 物理行3: 20 - 31
             &shift_mb2_hold
+            &trans
+            &trans
+            &ctrl_mb1_hold
+            &trans
+            &trans
+            &trans
+            &trans
+            &ctrl_mb1_hold
+            &trans
+            &trans
+            &shift_mb2_hold
+
+            // 物理行4: 32 - 39
             &shift_mb3_hold
             &trans
             &trans
             &trans
             &trans
-
-            // 物理行2: 10 - 19
-            &trans
-            &mkp MB3
-            &mkp MB2
-            &mkp MB1
             &trans
             &trans
-            &mkp MB1
-            &mkp MB2
-            &mkp MB3
-            &trans
-
-            // 物理行3: 20 - 31
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
-
-            // 物理行4: 32 - 39
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
+            &shift_mb3_hold
 
             >;
         };
