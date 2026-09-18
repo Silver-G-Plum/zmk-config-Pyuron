@@ -18,6 +18,10 @@
          20 23 28 31>;
 };
 
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer 13 500>;
+};
+
 &zip_mouse_gesture {
     stroke-size = <300>;
     enable-eager-mode;
