@@ -15,7 +15,7 @@
     excluded-positions =
         <1 2 3 6 7 8
          10 11 12 13 16 17 18 19
-         20 23 28 31 32 38>;
+         20 23 28 31>;
 };
 
 &zip_mouse_gesture {
@@ -171,142 +171,149 @@
             label = "TO_LAYER_0";
         };
 
+ctrl_mb1_hold: ctrl_mb1_hold {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <0>;
+    bindings =
+        <&macro_press &mo 13>,
+        <&macro_press &kp LCTRL>,
+        <&macro_wait_time 30>,
+        <&macro_press &mkp MB1>,
+        <&macro_pause_for_release>,
+        <&macro_release &mkp MB1>,
+        <&macro_wait_time 50>,
+        <&macro_release &kp LCTRL>,
+        <&macro_release &mo 13>;
+};
 
-    ctrl_mb1_hold: ctrl_mb1_hold {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        wait-ms = <0>;
-        bindings =
-            <&macro_press &mo 13>,
-            <&macro_press &kp LCTRL>,
-            <&macro_press &mkp MB1>,
-            <&macro_pause_for_release>,
-            <&macro_release &mkp MB1>,
-            <&macro_wait_time 150>,
-            <&macro_release &kp LCTRL>,
-            <&macro_release &mo 13>;
-    };
+ctrl_mb2_hold: ctrl_mb2_hold {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <0>;
+    bindings =
+        <&macro_press &mo 13>,
+        <&macro_press &kp LCTRL>,
+        <&macro_wait_time 30>,
+        <&macro_press &mkp MB2>,
+        <&macro_pause_for_release>,
+        <&macro_release &mkp MB2>,
+        <&macro_wait_time 50>,
+        <&macro_release &kp LCTRL>,
+        <&macro_release &mo 13>;
+};
 
-    ctrl_mb2_hold: ctrl_mb2_hold {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        wait-ms = <0>;
-        bindings =
-            <&macro_press &mo 13>,
-            <&macro_press &kp LCTRL>,
-            <&macro_press &mkp MB2>,
-            <&macro_pause_for_release>,
-            <&macro_release &mkp MB2>,
-            <&macro_wait_time 50>,
-            <&macro_release &kp LCTRL>,
-            <&macro_release &mo 13>;
-    };
+ctrl_mb3_hold: ctrl_mb3_hold {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <0>;
+    bindings =
+        <&macro_press &mo 13>,
+        <&macro_press &kp LCTRL>,
+        <&macro_wait_time 30>,
+        <&macro_press &mkp MB3>,
+        <&macro_pause_for_release>,
+        <&macro_release &mkp MB3>,
+        <&macro_wait_time 50>,
+        <&macro_release &kp LCTRL>,
+        <&macro_release &mo 13>;
+};
 
-    ctrl_mb3_hold: ctrl_mb3_hold {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        wait-ms = <0>;
-        bindings =
-            <&macro_press &mo 13>,
-            <&macro_press &kp LCTRL>,
-            <&macro_press &mkp MB3>,
-            <&macro_pause_for_release>,
-            <&macro_release &mkp MB3>,
-            <&macro_wait_time 50>,
-            <&macro_release &kp LCTRL>,
-            <&macro_release &mo 13>;
-    };
+ctrl_r_mb1_hold: ctrl_r_mb1_hold {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <0>;
+    bindings =
+        <&macro_press &mo 13>,
+        <&macro_press &kp RCTRL>,
+        <&macro_wait_time 30>,
+        <&macro_press &mkp MB1>,
+        <&macro_pause_for_release>,
+        <&macro_release &mkp MB1>,
+        <&macro_wait_time 50>,
+        <&macro_release &kp RCTRL>,
+        <&macro_release &mo 13>;
+};
 
-    ctrl_r_mb1_hold: ctrl_r_mb1_hold {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        wait-ms = <0>;
-        bindings =
-            <&macro_press &mo 13>,
-            <&macro_press &kp RCTRL>,
-            <&macro_press &mkp MB1>,
-            <&macro_pause_for_release>,
-            <&macro_release &mkp MB1>,
-            <&macro_wait_time 50>,
-            <&macro_release &kp RCTRL>,
-            <&macro_release &mo 13>;
-    };
+ctrl_r_mb2_hold: ctrl_r_mb2_hold {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <0>;
+    bindings =
+        <&macro_press &mo 13>,
+        <&macro_press &kp RCTRL>,
+        <&macro_wait_time 30>,
+        <&macro_press &mkp MB2>,
+        <&macro_pause_for_release>,
+        <&macro_release &mkp MB2>,
+        <&macro_wait_time 50>,
+        <&macro_release &kp RCTRL>,
+        <&macro_release &mo 13>;
+};
 
-    ctrl_r_mb2_hold: ctrl_r_mb2_hold {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        wait-ms = <0>;
-        bindings =
-            <&macro_press &mo 13>,
-            <&macro_press &kp RCTRL>,
-            <&macro_press &mkp MB2>,
-            <&macro_pause_for_release>,
-            <&macro_release &mkp MB2>,
-            <&macro_wait_time 50>,
-            <&macro_release &kp RCTRL>,
-            <&macro_release &mo 13>;
-    };
+ctrl_r_mb3_hold: ctrl_r_mb3_hold {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <0>;
+    bindings =
+        <&macro_press &mo 13>,
+        <&macro_press &kp RCTRL>,
+        <&macro_wait_time 30>,
+        <&macro_press &mkp MB3>,
+        <&macro_pause_for_release>,
+        <&macro_release &mkp MB3>,
+        <&macro_wait_time 50>,
+        <&macro_release &kp RCTRL>,
+        <&macro_release &mo 13>;
+};
 
-    ctrl_r_mb3_hold: ctrl_r_mb3_hold {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        wait-ms = <0>;
-        bindings =
-            <&macro_press &mo 13>,
-            <&macro_press &kp RCTRL>,
-            <&macro_press &mkp MB3>,
-            <&macro_pause_for_release>,
-            <&macro_release &mkp MB3>,
-            <&macro_wait_time 50>,
-            <&macro_release &kp RCTRL>,
-            <&macro_release &mo 13>;
-    };
+shift_mb1_hold: shift_mb1_hold {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <0>;
+    bindings =
+        <&macro_press &mo 13>,
+        <&macro_press &kp LSHIFT>,
+        <&macro_wait_time 30>,
+        <&macro_press &mkp MB1>,
+        <&macro_pause_for_release>,
+        <&macro_release &mkp MB1>,
+        <&macro_wait_time 50>,
+        <&macro_release &kp LSHIFT>,
+        <&macro_release &mo 13>;
+};
 
-    shift_mb1_hold: shift_mb1_hold {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        wait-ms = <0>;
-        bindings =
-            <&macro_press &mo 13>,
-            <&macro_press &kp LSHIFT>,
-            <&macro_press &mkp MB1>,
-            <&macro_pause_for_release>,
-            <&macro_release &mkp MB1>,
-            <&macro_wait_time 50>,
-            <&macro_release &kp LSHIFT>,
-            <&macro_release &mo 13>;
-    };
+shift_mb2_hold: shift_mb2_hold {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <0>;
+    bindings =
+        <&macro_press &mo 13>,
+        <&macro_press &kp LSHIFT>,
+        <&macro_wait_time 30>,
+        <&macro_press &mkp MB2>,
+        <&macro_pause_for_release>,
+        <&macro_release &mkp MB2>,
+        <&macro_wait_time 50>,
+        <&macro_release &kp LSHIFT>,
+        <&macro_release &mo 13>;
+};
 
-    shift_mb2_hold: shift_mb2_hold {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        wait-ms = <0>;
-        bindings =
-            <&macro_press &mo 13>,
-            <&macro_press &kp LSHIFT>,
-            <&macro_press &mkp MB2>,
-            <&macro_pause_for_release>,
-            <&macro_release &mkp MB2>,
-            <&macro_wait_time 50>,
-            <&macro_release &kp LSHIFT>,
-            <&macro_release &mo 13>;
-    };
-
-    shift_mb3_hold: shift_mb3_hold {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        wait-ms = <0>;
-        bindings =
-            <&macro_press &mo 13>,
-            <&macro_press &kp LSHIFT>,
-            <&macro_press &mkp MB3>,
-            <&macro_pause_for_release>,
-            <&macro_release &mkp MB3>,
-            <&macro_wait_time 50>,
-            <&macro_release &kp LSHIFT>,
-            <&macro_release &mo 13>;
-    };
-
+shift_mb3_hold: shift_mb3_hold {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <0>;
+    bindings =
+        <&macro_press &mo 13>,
+        <&macro_press &kp LSHIFT>,
+        <&macro_wait_time 30>,
+        <&macro_press &mkp MB3>,
+        <&macro_pause_for_release>,
+        <&macro_release &mkp MB3>,
+        <&macro_wait_time 50>,
+        <&macro_release &kp LSHIFT>,
+        <&macro_release &mo 13>;
+};
 
 
     };
@@ -1072,14 +1079,14 @@
             &shift_mb2_hold
 
             // 物理行4: 32 - 39
-            &shift_mb3_hold
             &trans
             &trans
             &trans
             &trans
             &trans
             &trans
-            &shift_mb3_hold
+            &trans
+            &trans
 
             >;
         };
