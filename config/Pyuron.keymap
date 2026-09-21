@@ -55,6 +55,7 @@
 / {
 mouse_gesture_window: mouse_gesture_window {
     compatible = "zmk,input-processor-mouse-gesture";
+    #input-processor-cells = <0>;
 
     stroke-size = <300>;
     enable-eager-mode;
@@ -85,6 +86,7 @@ mouse_gesture_window: mouse_gesture_window {
 
 mouse_gesture_apple: mouse_gesture_apple {
     compatible = "zmk,input-processor-mouse-gesture";
+    #input-processor-cells = <0>;
 
     stroke-size = <300>;
     enable-eager-mode;
