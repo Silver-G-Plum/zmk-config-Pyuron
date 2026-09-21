@@ -50,6 +50,9 @@
     };
 };
 
+
+
+/ {
 mouse_gesture_window: mouse_gesture_window {
     compatible = "zmk,input-processor-mouse-gesture";
 
@@ -110,8 +113,6 @@ mouse_gesture_apple: mouse_gesture_apple {
     };
 };
 
-
-/ {
     combos {
         compatible = "zmk,combos";
 
