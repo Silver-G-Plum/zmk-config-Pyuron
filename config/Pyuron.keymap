@@ -31,12 +31,12 @@
 
     gesture_forward {
         pattern = <GESTURE_RIGHT>;
-        bindings = <&kp C_AC_FORWARD>;
+        bindings = <&kp LG(RBKT)>;
     };
 
     gesture_back {
         pattern = <GESTURE_LEFT>;
-        bindings = <&kp C_AC_BACK>;
+        bindings = <&kp LG(LBKT)>;
     };
 
     gesture_zoom_in {
