@@ -12,8 +12,8 @@ manifest:
       url-base: https://github.com/kot149  
     - name: amgskobo
       url-base: https://github.com/amgskobo
-    - name: oleksandrmaslov
-      url-base: https://github.com/oleksandrmaslov
+    - name: Silver-G-Plum
+      url-base: https://github.com/Silver-G-Plum
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -35,7 +35,7 @@ manifest:
       remote: kot149
       revision: v1
     - name: zmk-pointing-acceleration
-      remote: oleksandrmaslov
+      remote: Silver-G-Plum
       revision: main  
   self:
     path: config
