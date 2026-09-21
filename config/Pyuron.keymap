@@ -50,6 +50,67 @@
     };
 };
 
+mouse_gesture_window: mouse_gesture_window {
+    compatible = "zmk,input-processor-mouse-gesture";
+
+    stroke-size = <300>;
+    enable-eager-mode;
+    suppress-movement;
+    idle-timeout-ms = <150>;
+    gesture-cooldown-ms = <500>;
+
+    gesture_right {
+        pattern = <GESTURE_RIGHT>;
+        bindings = <&kp LG(RIGHT)>;
+    };
+
+    gesture_left {
+        pattern = <GESTURE_LEFT>;
+        bindings = <&kp LG(LEFT)>;
+    };
+
+    gesture_up {
+        pattern = <GESTURE_UP>;
+        bindings = <&kp LG(UP)>;
+    };
+
+    gesture_down {
+        pattern = <GESTURE_DOWN>;
+        bindings = <&kp LG(DOWN)>;
+    };
+};
+
+mouse_gesture_apple: mouse_gesture_apple {
+    compatible = "zmk,input-processor-mouse-gesture";
+
+    stroke-size = <300>;
+    enable-eager-mode;
+    suppress-movement;
+    idle-timeout-ms = <150>;
+    gesture-cooldown-ms = <500>;
+
+    gesture_right {
+        pattern = <GESTURE_RIGHT>;
+        bindings = <&kp LG(RBKT)>;
+    };
+
+    gesture_left {
+        pattern = <GESTURE_LEFT>;
+        bindings = <&kp LG(LBKT)>;
+    };
+
+    gesture_up {
+        pattern = <GESTURE_UP>;
+        bindings = <&kp LG(PLUS)>;
+    };
+
+    gesture_down {
+        pattern = <GESTURE_DOWN>;
+        bindings = <&kp LG(MINUS)>;
+    };
+};
+
+
 / {
     combos {
         compatible = "zmk,combos";
