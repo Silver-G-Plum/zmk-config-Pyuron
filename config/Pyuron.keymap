@@ -343,7 +343,7 @@ shift_mb3_hold: shift_mb3_hold {
             bindings = <
 
             // 物理行1: 0 - 9
-            &mouse_gesture_kp 0 Q
+            &lt 15 Q
             &kp W
             &kp E
             &kp R
@@ -352,7 +352,7 @@ shift_mb3_hold: shift_mb3_hold {
             &kp U
             &kp I
             &kp O
-            &mouse_gesture_kp 0 P
+            &lt 15 P
 
             // 物理行2: 10 - 19
             &kp A
@@ -381,14 +381,14 @@ shift_mb3_hold: shift_mb3_hold {
             &mt RSHFT SLASH
 
             // 物理行4: 32 - 39
-            &mouse_gesture_kp 0 ESC
+            &lt 16 ESC
             &mkp MB1
             &lt 1 SPACE
             &lt 2 ENTER
             &lt 3 ENTER
             &lt 4 SPACE
             &mkp MB1
-            &mouse_gesture_kp 0 ESC
+            &lt 16 ESC
 
             >;
         };
@@ -1149,8 +1149,113 @@ shift_mb3_hold: shift_mb3_hold {
             >;
         };
 
+        layer_15 {
+            bindings = <
 
+            // 物理行1: 0 - 9
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
 
+            // 物理行2: 10 - 19
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+
+            // 物理行3: 20 - 31
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+
+            // 物理行4: 32 - 39
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+
+            >;
+        };
+
+        layer_16 {
+            bindings = <
+
+            // 物理行1: 0 - 9
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+
+            // 物理行2: 10 - 19
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+
+            // 物理行3: 20 - 31
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+
+            // 物理行4: 32 - 39
+            &trans
+            &mkp MB2
+            &trans
+            &trans
+            &trans
+            &trans
+            &mkp MB2
+            &trans
+
+            >;
+        };
 
     };
 };
