@@ -7,6 +7,7 @@
 #include <zmk-input-inertia/input/processor/input_inertia.dtsi>
 #include <mouse-gesture.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <behaviors/input_gestures_accel.dtsi>
 
 &zip_inertia {
     trigger-ms = <35>;
@@ -22,6 +23,19 @@
     scroll-threshold-stop = <0>;
 
     cancel-scroll-inertia-on-ctrl;
+};
+
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;
+    track-remainders;
+
+    min-factor = <800>;
+    max-factor = <3000>;
+
+    speed-threshold = <1200>;
+    speed-max = <6000>;
+
+    acceleration-exponent = <2>;
 };
 
 &uicr {
@@ -52,6 +66,7 @@ trackball_listener_L: trackball_listener_L {
 
     // 通常時：カーソル
     input-processors =
+        <&pointer_accel>,
         <&zip_xy_transform
             (INPUT_TRANSFORM_XY_SWAP |
              INPUT_TRANSFORM_X_INVERT)>,
@@ -63,6 +78,7 @@ trackball_listener_L: trackball_listener_L {
     scroll_layer_11 {
         layers = <11>;
         input-processors =
+            <&pointer_accel>,
             <&zip_xy_transform
                 (INPUT_TRANSFORM_XY_SWAP |
                  INPUT_TRANSFORM_X_INVERT)>,
@@ -80,6 +96,7 @@ trackball_listener_R: trackball_listener_R {
 
     // 通常時：カーソル
     input-processors =
+        <&pointer_accel>,
         <&zip_xy_transform
             (INPUT_TRANSFORM_XY_SWAP |
              INPUT_TRANSFORM_Y_INVERT)>,
@@ -91,6 +108,7 @@ trackball_listener_R: trackball_listener_R {
     scroll_layer_12 {
         layers = <12>;
         input-processors =
+            <&pointer_accel>,
             <&zip_xy_transform
                 (INPUT_TRANSFORM_XY_SWAP |
                  INPUT_TRANSFORM_Y_INVERT)>,
