@@ -162,7 +162,7 @@ continuous_temp_layer: continuous_temp_layer {
     #input-processor-cells = <2>;
 
     continuous-ms = <50>;
-    max-gap-ms = <50>;
+    max-gap-ms = <100>;
 };
 
 
