@@ -44,9 +44,6 @@
     device = <&trackball_R>;
 };
 
-&continuous_temp_layer {
-    status = "okay";
-};
 
 &spi0 {
     status = "okay";
