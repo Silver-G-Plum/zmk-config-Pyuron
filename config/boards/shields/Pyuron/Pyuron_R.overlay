@@ -44,6 +44,10 @@
     device = <&trackball_R>;
 };
 
+&continuous_temp_layer {
+    status = "okay";
+};
+
 &spi0 {
     status = "okay";
     cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
