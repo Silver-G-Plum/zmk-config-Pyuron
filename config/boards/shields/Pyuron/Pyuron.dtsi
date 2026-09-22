@@ -71,7 +71,7 @@ trackball_listener_L: trackball_listener_L {
             (INPUT_TRANSFORM_XY_SWAP |
              INPUT_TRANSFORM_X_INVERT)>,
         <&zip_xy_scaler 1 2>,
-        <&zip_temp_layer 13 3000>,
+        <&continuous_temp_layer 13 3000>,
         <&zip_mouse_gesture>;
 
     // Layer 11：スクロール
@@ -118,7 +118,7 @@ trackball_listener_R: trackball_listener_R {
             (INPUT_TRANSFORM_XY_SWAP |
              INPUT_TRANSFORM_Y_INVERT)>,
         <&zip_xy_scaler 1 2>,
-        <&zip_temp_layer 13 3000>,
+        <&continuous_temp_layer 13 3000>,
         <&zip_mouse_gesture>;
 
     // Layer 12：スクロール
@@ -153,6 +153,16 @@ trackball_listener_R: trackball_listener_R {
             <&mouse_gesture_apple>;
     };
 };
+
+continuous_temp_layer: continuous_temp_layer {
+    compatible = "zmk,input-processor-continuous-temp-layer";
+
+    #input-processor-cells = <2>;
+
+    continuous-ms = <50>;
+    max-gap-ms = <20>;
+};
+
 
 
     default_transform: keymap_transform_0 {
