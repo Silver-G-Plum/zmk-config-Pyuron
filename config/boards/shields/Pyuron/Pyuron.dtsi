@@ -156,11 +156,12 @@ trackball_listener_R: trackball_listener_R {
 
 continuous_temp_layer: continuous_temp_layer {
     compatible = "zmk,input-processor-continuous-temp-layer";
+    status = "disabled";
 
     #input-processor-cells = <2>;
 
     continuous-ms = <50>;
-    max-gap-ms = <20>;
+    max-gap-ms = <50>;
 };
 
 
