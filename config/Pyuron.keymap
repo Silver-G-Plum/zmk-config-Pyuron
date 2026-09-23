@@ -20,7 +20,7 @@
 };
 
 &mkp_input_listener {
-    input-processors = <&zip_temp_layer 13 0>;
+    input-processors = <&zip_temp_layer 13 100>;
 };
 
 &zip_mouse_gesture {
