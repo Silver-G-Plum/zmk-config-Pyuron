@@ -1177,10 +1177,10 @@ shift_mb3_hold: shift_mb3_hold {
             // 物理行4: 32 - 39
             &trans
             &trans
-            &to 0
+            &none
             &trans
             &trans
-            &to 0
+            &none
             &trans
             &trans
 
