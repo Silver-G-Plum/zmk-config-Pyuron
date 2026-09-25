@@ -16,7 +16,7 @@
     excluded-positions =
         <1 2 3 6 7 8
          10 11 12 13 16 17 18 19
-         20 23 28 31>;
+         20 23 28 31 34 37>;
 };
 
 &mkp_input_listener {
@@ -1177,10 +1177,10 @@ shift_mb3_hold: shift_mb3_hold {
             // 物理行4: 32 - 39
             &trans
             &trans
-            &none
+            &to 0
             &trans
             &trans
-            &none
+            &to 0
             &trans
             &trans
 
