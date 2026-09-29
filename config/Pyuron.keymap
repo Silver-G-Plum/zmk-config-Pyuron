@@ -12,17 +12,6 @@
     quick-tap-ms = <0>;
 };
 
-&zip_temp_layer {
-    excluded-positions =
-        <1 2 3 6 7 8
-         10 11 12 13 16 17 18 19
-         20 23 28 31 34 37>;
-};
-
-&mkp_input_listener {
-    input-processors = <&zip_temp_layer 13 0>;
-};
-
 &zip_mouse_gesture {
     stroke-size = <300>;
     enable-eager-mode;
@@ -144,35 +133,144 @@ ctrl_scroll_right: ctrl_scroll_right {
 
 
     combos {
-        compatible = "zmk,combos";
+    compatible = "zmk,combos";
 
-        // F + E → 左クリック
-        combo_left_click_1 {
-            timeout-ms = <50>;
-            key-positions = <13 2>;
-            bindings = <&mkp LCLK>;
-        };
+    // =========================================================
+    // 通常クリック
+    // =========================================================
 
-        // J + I → 左クリック
-        combo_left_click_2 {
-            timeout-ms = <50>;
-            key-positions = <16 7>;
-            bindings = <&mkp LCLK>;
-        };
+    // 左クリック
+    combo_left_click_1 {
+        timeout-ms = <50>;
+        key-positions = <3 13>;
+        bindings = <&mkp LCLK>;
+    };
 
-        // W + A → 右クリック
-        combo_right_click_1 {
-            timeout-ms = <50>;
-            key-positions = <1 10>;
-            bindings = <&mkp RCLK>;
-        };
+    combo_left_click_2 {
+        timeout-ms = <50>;
+        key-positions = <6 16>;
+        bindings = <&mkp LCLK>;
+    };
 
-        // O + ' → 右クリック
-        combo_right_click_2 {
-            timeout-ms = <50>;
-            key-positions = <8 19>;
-            bindings = <&mkp RCLK>;
-        };
+
+    // 中クリック
+    combo_middle_click_1 {
+        timeout-ms = <50>;
+        key-positions = <2 12>;
+        bindings = <&mkp MCLK>;
+    };
+
+    combo_middle_click_2 {
+        timeout-ms = <50>;
+        key-positions = <7 17>;
+        bindings = <&mkp MCLK>;
+    };
+
+
+    // 右クリック
+    combo_right_click_1 {
+        timeout-ms = <50>;
+        key-positions = <1 11>;
+        bindings = <&mkp RCLK>;
+    };
+
+    combo_right_click_2 {
+        timeout-ms = <50>;
+        key-positions = <8 18>;
+        bindings = <&mkp RCLK>;
+    };
+
+
+    // =========================================================
+    // CTRL + クリック
+    // =========================================================
+
+    // Ctrl + 左クリック
+    combo_ctrl_left_click_1 {
+        timeout-ms = <50>;
+        key-positions = <13 23>;
+        bindings = <&ctrl_lclick_hold>;
+    };
+
+    combo_ctrl_left_click_2 {
+        timeout-ms = <50>;
+        key-positions = <16 28>;
+        bindings = <&ctrl_lclick_hold>;
+    };
+
+
+    // Ctrl + 中クリック
+    combo_ctrl_middle_click_1 {
+        timeout-ms = <50>;
+        key-positions = <12 22>;
+        bindings = <&ctrl_mclick_hold>;
+    };
+
+    combo_ctrl_middle_click_2 {
+        timeout-ms = <50>;
+        key-positions = <17 29>;
+        bindings = <&ctrl_mclick_hold>;
+    };
+
+
+    // Ctrl + 右クリック
+    combo_ctrl_right_click_1 {
+        timeout-ms = <50>;
+        key-positions = <11 21>;
+        bindings = <&ctrl_rclick_hold>;
+    };
+
+    combo_ctrl_right_click_2 {
+        timeout-ms = <50>;
+        key-positions = <18 30>;
+        bindings = <&ctrl_rclick_hold>;
+    };
+
+
+    // =========================================================
+    // SHIFT + クリック
+    // =========================================================
+
+    // Shift + 左クリック
+    combo_shift_left_click_1 {
+        timeout-ms = <50>;
+        key-positions = <22 23>;
+        bindings = <&shift_lclick_hold>;
+    };
+
+    combo_shift_left_click_2 {
+        timeout-ms = <50>;
+        key-positions = <28 29>;
+        bindings = <&shift_lclick_hold>;
+    };
+
+
+    // Shift + 中クリック
+    combo_shift_middle_click_1 {
+        timeout-ms = <50>;
+        key-positions = <21 22>;
+        bindings = <&shift_mclick_hold>;
+    };
+
+    combo_shift_middle_click_2 {
+        timeout-ms = <50>;
+        key-positions = <29 30>;
+        bindings = <&shift_mclick_hold>;
+    };
+
+
+    // Shift + 右クリック
+    combo_shift_right_click_1 {
+        timeout-ms = <50>;
+        key-positions = <20 21>;
+        bindings = <&shift_rclick_hold>;
+    };
+
+    combo_shift_right_click_2 {
+        timeout-ms = <50>;
+        key-positions = <30 31>;
+        bindings = <&shift_rclick_hold>;
+    };
 
         // W + E → 左トラックボールをスクロール
         combo_scroll_left {
@@ -216,33 +314,6 @@ combo_ctrl_scroll_right {
             bindings = <&mo 10>;
         };
 
-        // D + W → 左クリック
-        combo_left_click_3 {
-            timeout-ms = <50>;
-            key-positions = <12 1>;
-            bindings = <&mkp LCLK>;
-        };
-
-        // K + O → 左クリック
-        combo_left_click_4 {
-            timeout-ms = <50>;
-            key-positions = <17 8>;
-            bindings = <&mkp LCLK>;
-        };
-
-        // Q + W → 左トラックボールをスクロール
-        combo_scroll_left_2 {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&mo 11>;
-        };
-
-        // O + P → 右トラックボールをスクロール
-        combo_scroll_right_2 {
-            timeout-ms = <50>;
-            key-positions = <8 9>;
-            bindings = <&mo 12>;
-        };
 
         // 左下外側2キー → 左トラックボールをスクロール
         combo_scroll_left_3 {
@@ -267,149 +338,102 @@ combo_ctrl_scroll_right {
             label = "TO_LAYER_0";
         };
 
-ctrl_mb1_hold: ctrl_mb1_hold {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    wait-ms = <0>;
-    bindings =
-        <&macro_press &mo 13>,
-        <&macro_press &kp LCTRL>,
-        <&macro_wait_time 30>,
-        <&macro_press &mkp MB1>,
-        <&macro_pause_for_release>,
-        <&macro_release &mkp MB1>,
-        <&macro_wait_time 50>,
-        <&macro_release &kp LCTRL>,
-        <&macro_release &mo 13>;
-};
+    // =========================================================
+    // CTRL + Left Click
+    // =========================================================
+    ctrl_lclick_hold: ctrl_lclick_hold {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <0>;
+        bindings =
+            <&macro_press &kp LCTRL>,
+            <&macro_wait_time 30>,
+            <&macro_press &mkp MB1>,
+            <&macro_pause_for_release>,
+            <&macro_release &mkp MB1>,
+            <&macro_release &kp LCTRL>;
+    };
 
-ctrl_mb2_hold: ctrl_mb2_hold {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    wait-ms = <0>;
-    bindings =
-        <&macro_press &mo 13>,
-        <&macro_press &kp LCTRL>,
-        <&macro_wait_time 30>,
-        <&macro_press &mkp MB2>,
-        <&macro_pause_for_release>,
-        <&macro_release &mkp MB2>,
-        <&macro_wait_time 50>,
-        <&macro_release &kp LCTRL>,
-        <&macro_release &mo 13>;
-};
+    // =========================================================
+    // CTRL + Middle Click
+    // =========================================================
+    ctrl_mclick_hold: ctrl_mclick_hold {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <0>;
+        bindings =
+            <&macro_press &kp LCTRL>,
+            <&macro_wait_time 30>,
+            <&macro_press &mkp MB2>,
+            <&macro_pause_for_release>,
+            <&macro_release &mkp MB2>,
+            <&macro_release &kp LCTRL>;
+    };
 
-ctrl_mb3_hold: ctrl_mb3_hold {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    wait-ms = <0>;
-    bindings =
-        <&macro_press &mo 13>,
-        <&macro_press &kp LCTRL>,
-        <&macro_wait_time 30>,
-        <&macro_press &mkp MB3>,
-        <&macro_pause_for_release>,
-        <&macro_release &mkp MB3>,
-        <&macro_wait_time 50>,
-        <&macro_release &kp LCTRL>,
-        <&macro_release &mo 13>;
-};
+    // =========================================================
+    // CTRL + Right Click
+    // =========================================================
+    ctrl_rclick_hold: ctrl_rclick_hold {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <0>;
+        bindings =
+            <&macro_press &kp LCTRL>,
+            <&macro_wait_time 30>,
+            <&macro_press &mkp MB3>,
+            <&macro_pause_for_release>,
+            <&macro_release &mkp MB3>,
+            <&macro_release &kp LCTRL>;
+    };
 
-ctrl_r_mb1_hold: ctrl_r_mb1_hold {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    wait-ms = <0>;
-    bindings =
-        <&macro_press &mo 13>,
-        <&macro_press &kp RCTRL>,
-        <&macro_wait_time 30>,
-        <&macro_press &mkp MB1>,
-        <&macro_pause_for_release>,
-        <&macro_release &mkp MB1>,
-        <&macro_wait_time 50>,
-        <&macro_release &kp RCTRL>,
-        <&macro_release &mo 13>;
-};
 
-ctrl_r_mb2_hold: ctrl_r_mb2_hold {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    wait-ms = <0>;
-    bindings =
-        <&macro_press &mo 13>,
-        <&macro_press &kp RCTRL>,
-        <&macro_wait_time 30>,
-        <&macro_press &mkp MB2>,
-        <&macro_pause_for_release>,
-        <&macro_release &mkp MB2>,
-        <&macro_wait_time 50>,
-        <&macro_release &kp RCTRL>,
-        <&macro_release &mo 13>;
-};
+    // =========================================================
+    // SHIFT + Left Click
+    // =========================================================
+    shift_lclick_hold: shift_lclick_hold {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <0>;
+        bindings =
+            <&macro_press &kp LSHIFT>,
+            <&macro_wait_time 30>,
+            <&macro_press &mkp MB1>,
+            <&macro_pause_for_release>,
+            <&macro_release &mkp MB1>,
+            <&macro_release &kp LSHIFT>;
+    };
 
-ctrl_r_mb3_hold: ctrl_r_mb3_hold {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    wait-ms = <0>;
-    bindings =
-        <&macro_press &mo 13>,
-        <&macro_press &kp RCTRL>,
-        <&macro_wait_time 30>,
-        <&macro_press &mkp MB3>,
-        <&macro_pause_for_release>,
-        <&macro_release &mkp MB3>,
-        <&macro_wait_time 50>,
-        <&macro_release &kp RCTRL>,
-        <&macro_release &mo 13>;
-};
+    // =========================================================
+    // SHIFT + Middle Click
+    // =========================================================
+    shift_mclick_hold: shift_mclick_hold {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <0>;
+        bindings =
+            <&macro_press &kp LSHIFT>,
+            <&macro_wait_time 30>,
+            <&macro_press &mkp MB2>,
+            <&macro_pause_for_release>,
+            <&macro_release &mkp MB2>,
+            <&macro_release &kp LSHIFT>;
+    };
 
-shift_mb1_hold: shift_mb1_hold {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    wait-ms = <0>;
-    bindings =
-        <&macro_press &mo 13>,
-        <&macro_press &kp LSHIFT>,
-        <&macro_wait_time 30>,
-        <&macro_press &mkp MB1>,
-        <&macro_pause_for_release>,
-        <&macro_release &mkp MB1>,
-        <&macro_wait_time 50>,
-        <&macro_release &kp LSHIFT>,
-        <&macro_release &mo 13>;
-};
-
-shift_mb2_hold: shift_mb2_hold {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    wait-ms = <0>;
-    bindings =
-        <&macro_press &mo 13>,
-        <&macro_press &kp LSHIFT>,
-        <&macro_wait_time 30>,
-        <&macro_press &mkp MB2>,
-        <&macro_pause_for_release>,
-        <&macro_release &mkp MB2>,
-        <&macro_wait_time 50>,
-        <&macro_release &kp LSHIFT>,
-        <&macro_release &mo 13>;
-};
-
-shift_mb3_hold: shift_mb3_hold {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    wait-ms = <0>;
-    bindings =
-        <&macro_press &mo 13>,
-        <&macro_press &kp LSHIFT>,
-        <&macro_wait_time 30>,
-        <&macro_press &mkp MB3>,
-        <&macro_pause_for_release>,
-        <&macro_release &mkp MB3>,
-        <&macro_wait_time 50>,
-        <&macro_release &kp LSHIFT>,
-        <&macro_release &mo 13>;
-};
+    // =========================================================
+    // SHIFT + Right Click
+    // =========================================================
+    shift_rclick_hold: shift_rclick_hold {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <0>;
+        bindings =
+            <&macro_press &kp LSHIFT>,
+            <&macro_wait_time 30>,
+            <&macro_press &mkp MB3>,
+            <&macro_pause_for_release>,
+            <&macro_release &mkp MB3>,
+            <&macro_release &kp LSHIFT>;
+    };
 
 
     };
@@ -1138,49 +1162,49 @@ shift_mb3_hold: shift_mb3_hold {
 
             // 物理行1: 0 - 9
             &trans
-            &mkp MB3
-            &mkp MB2
-            &ctrl_r_mb3_hold
             &trans
             &trans
-            &ctrl_r_mb3_hold
-            &mkp MB2
-            &mkp MB3
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
             &trans
 
             // 物理行2: 10 - 19
-            &shift_mb1_hold
-            &ctrl_mb3_hold
-            &ctrl_mb2_hold
-            &mkp MB1
             &trans
             &trans
-            &mkp MB1
-            &ctrl_mb2_hold
-            &ctrl_mb3_hold
-            &shift_mb1_hold
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
 
             // 物理行3: 20 - 31
-            &shift_mb2_hold
-            &trans
-            &trans
-            &ctrl_mb1_hold
             &trans
             &trans
             &trans
             &trans
-            &ctrl_mb1_hold
             &trans
             &trans
-            &shift_mb2_hold
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
+            &trans
 
             // 物理行4: 32 - 39
             &trans
             &trans
-            &to 0
             &trans
             &trans
-            &to 0
+            &trans
+            &trans
             &trans
             &trans
 
