@@ -17,7 +17,7 @@ manifest:
       
   projects:
     - name: zmk
-      remote: Silver-G-Plum
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
     - name: zmk-driver-paw3222
@@ -37,9 +37,6 @@ manifest:
       revision: v1
     - name: zmk-pointing-acceleration
       remote: Silver-G-Plum
-      revision: main
-    - name: zmk-input-processor-continuous-temp-layer
-      remote: Silver-G-Plum
-      revision: main      
+      revision: main     
   self:
     path: config
