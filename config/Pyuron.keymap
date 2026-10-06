@@ -131,7 +131,7 @@ ctrl_scroll_right: ctrl_scroll_right {
         <&macro_release &kp LCTRL>;
 };
 
-Rctrl_scroll_left: ctrl_scroll_left {
+Rctrl_scroll_left: Rctrl_scroll_left {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     wait-ms = <0>;
@@ -144,7 +144,7 @@ Rctrl_scroll_left: ctrl_scroll_left {
         <&macro_release &kp RCTRL>;
 };
 
-Rctrl_scroll_right: ctrl_scroll_right {
+Rctrl_scroll_right: Rctrl_scroll_right {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     wait-ms = <0>;
