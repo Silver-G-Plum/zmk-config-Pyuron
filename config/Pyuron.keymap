@@ -311,28 +311,28 @@ ctrl_scroll_right: ctrl_scroll_right {
     };
 
         // 左親指2キー → レイヤー7
-        combo_left_thumb_layer {
+        combo_left_thumb_layer_1 {
             timeout-ms = <50>;
             key-positions = <24 34>;
             bindings = <&mo 7>;
         };
 
         // 右親指2キー → レイヤー8
-        combo_right_thumb_layer {
+        combo_right_thumb_layer_1 {
             timeout-ms = <50>;
             key-positions = <27 37>;
             bindings = <&mo 8>;
         };
 
         // 左親指2キー → レイヤー9
-        combo_left_thumb_layer {
+        combo_left_thumb_layer_2 {
             timeout-ms = <50>;
             key-positions = <34 35>;
             bindings = <&mo 9>;
         };
 
         // 右親指2キー → レイヤー10
-        combo_right_thumb_layer {
+        combo_right_thumb_layer_2 {
             timeout-ms = <50>;
             key-positions = <36 37>;
             bindings = <&mo 10>;
