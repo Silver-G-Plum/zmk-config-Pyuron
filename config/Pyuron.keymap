@@ -131,7 +131,7 @@ ctrl_scroll_right: ctrl_scroll_right {
         <&macro_release &kp LCTRL>;
 };
 
-Rctrl_scroll_left: Rctrl_scroll_left {
+rctrl_scroll_left: rctrl_scroll_left {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     wait-ms = <0>;
@@ -144,7 +144,7 @@ Rctrl_scroll_left: Rctrl_scroll_left {
         <&macro_release &kp RCTRL>;
 };
 
-Rctrl_scroll_right: Rctrl_scroll_right {
+rctrl_scroll_right: rctrl_scroll_right {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     wait-ms = <0>;
@@ -337,17 +337,17 @@ Rctrl_scroll_right: Rctrl_scroll_right {
     };
 
     // Left trackball RCtrl + scroll
-    combo_Rctrl_scroll_left {
+    combo_rctrl_scroll_left {
         timeout-ms = <50>;
         key-positions = <3 13>;
-        bindings = <&Rctrl_scroll_left_hold>;
+        bindings = <&rctrl_scroll_left_hold>;
     };
 
     // Right trackball RCtrl + scroll
-    combo_Rctrl_scroll_right {
+    combo_rctrl_scroll_right {
         timeout-ms = <50>;
         key-positions = <6 16>;
-        bindings = <&Rctrl_scroll_right_hold>;
+        bindings = <&rctrl_scroll_right_hold>;
     };
 
         // 左親指2キー → レイヤー7
