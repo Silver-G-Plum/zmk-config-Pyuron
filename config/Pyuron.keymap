@@ -280,14 +280,14 @@ ctrl_scroll_right: ctrl_scroll_right {
     // Left trackball scroll
     combo_scroll_left {
         timeout-ms = <50>;
-        key-positions = <0 10>;
+        key-positions = <12 22>;
         bindings = <&scroll_left_hold>;
     };
 
     // Right trackball scroll
     combo_scroll_right {
         timeout-ms = <50>;
-        key-positions = <9 19>;
+        key-positions = <17 29>;
         bindings = <&scroll_right_hold>;
     };
 
@@ -299,16 +299,30 @@ ctrl_scroll_right: ctrl_scroll_right {
     // Left trackball Ctrl + scroll
     combo_ctrl_scroll_left {
         timeout-ms = <50>;
-        key-positions = <10 20>;
+        key-positions = <11 21>;
         bindings = <&ctrl_scroll_left_hold>;
     };
 
     // Right trackball Ctrl + scroll
     combo_ctrl_scroll_right {
         timeout-ms = <50>;
-        key-positions = <19 31>;
+        key-positions = <18 30>;
         bindings = <&ctrl_scroll_right_hold>;
     };
+
+        // 左親指2キー → レイヤー7
+        combo_left_thumb_layer {
+            timeout-ms = <50>;
+            key-positions = <24 34>;
+            bindings = <&mo 7>;
+        };
+
+        // 右親指2キー → レイヤー8
+        combo_right_thumb_layer {
+            timeout-ms = <50>;
+            key-positions = <27 37>;
+            bindings = <&mo 8>;
+        };
 
         // 左親指2キー → レイヤー9
         combo_left_thumb_layer {
@@ -895,11 +909,11 @@ ctrl_scroll_right: ctrl_scroll_right {
             bindings = <
 
             // 物理行1: 0 - 9
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
+            &kp F1
+            &kp F2
+            &kp F3
+            &kp F4
+            &kp F5
             &trans
             &trans
             &trans
@@ -907,11 +921,11 @@ ctrl_scroll_right: ctrl_scroll_right {
             &trans
 
             // 物理行2: 10 - 19
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
+            &kp F10
+            &kp F9
+            &kp F8
+            &kp F7
+            &kp F6
             &trans
             &trans
             &trans
@@ -919,8 +933,8 @@ ctrl_scroll_right: ctrl_scroll_right {
             &trans
 
             // 物理行3: 20 - 31
-            &trans
-            &trans
+            &kp F11
+            &kp F12
             &trans
             &trans
             &trans
@@ -954,11 +968,11 @@ ctrl_scroll_right: ctrl_scroll_right {
             &trans
             &trans
             &trans
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
+            &kp F5
+            &kp F4
+            &kp F3
+            &kp F2
+            &kp F1
 
             // 物理行2: 10 - 19
             &trans
@@ -966,11 +980,11 @@ ctrl_scroll_right: ctrl_scroll_right {
             &trans
             &trans
             &trans
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
+            &kp F6
+            &kp F7
+            &kp F8
+            &kp F9
+            &kp F10
 
             // 物理行3: 20 - 31
             &trans
@@ -983,8 +997,8 @@ ctrl_scroll_right: ctrl_scroll_right {
             &trans
             &trans
             &trans
-            &trans
-            &trans
+            &kp F12
+            &kp F11
 
             // 物理行4: 32 - 39
             &trans
@@ -1003,11 +1017,11 @@ ctrl_scroll_right: ctrl_scroll_right {
             bindings = <
 
             // 物理行1: 0 - 9
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
+            &kp N1
+            &kp N2
+            &kp N3
+            &kp N4
+            &kp N5
             &bt BT_SEL 0
             &bt BT_SEL 1
             &bt BT_SEL 2
@@ -1015,11 +1029,11 @@ ctrl_scroll_right: ctrl_scroll_right {
             &bt BT_SEL 4
 
             // 物理行2: 10 - 19
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
+            &kp N0
+            &kp N9
+            &kp N8
+            &kp N7
+            &kp N6
             &trans
             &trans
             &trans
@@ -1062,11 +1076,11 @@ ctrl_scroll_right: ctrl_scroll_right {
             &trans
             &trans
             &trans
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
+            &kp N5
+            &kp N4
+            &kp N3
+            &kp N2
+            &kp N1
 
             // 物理行2: 10 - 19
             &trans
@@ -1074,11 +1088,11 @@ ctrl_scroll_right: ctrl_scroll_right {
             &trans
             &trans
             &trans
-            &trans
-            &trans
-            &trans
-            &trans
-            &trans
+            &kp N6
+            &kp N7
+            &kp N8
+            &kp N9
+            &kp N0
 
             // 物理行3: 20 - 31
             &trans
